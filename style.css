@@ -1,0 +1,516 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --black: #080808;
+    --dark: #110b0c;
+    --red: #e31b23;
+    --deep-red: #85080e;
+    --white: #f4eeee;
+    --grey: #b9aaaa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.8;
+}
+
+a {
+    color: var(--red);
+}
+
+/* HEADER */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(5, 5, 5, 0.97);
+    border-bottom: 1px solid #531014;
+    padding: 12px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.logo img {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid var(--red);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+}
+
+nav a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--red);
+}
+
+.menu-button {
+    display: none;
+    color: white;
+    background: transparent;
+    border: 1px solid var(--red);
+    padding: 7px 12px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 85vh;
+    padding: 75px 9%;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 50px;
+    background:
+        radial-gradient(
+            circle at 80% 40%,
+            rgba(130, 0, 0, 0.18),
+            transparent 50%
+        );
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.subtitle,
+.section-number {
+    color: var(--red);
+    letter-spacing: 4px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.hero h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(38px, 5.5vw, 72px);
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--red);
+}
+
+.hero h2 {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+}
+
+.hero-content > p:not(.subtitle) {
+    color: var(--grey);
+    margin-bottom: 25px;
+}
+
+.affirmation {
+    color: var(--red);
+    font-family: 'Cinzel', serif;
+    margin: 25px 0;
+}
+
+.button {
+    display: inline-block;
+    background: var(--deep-red);
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border: 1px solid var(--red);
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: var(--red);
+    transform: translateY(-3px);
+}
+
+.hero-image {
+    text-align: center;
+}
+
+.main-sigil {
+    display: block;
+    width: 100%;
+    max-width: 440px;
+    height: auto;
+    margin: auto;
+    border: 1px solid #4d1014;
+    box-shadow: 0 0 40px rgba(227, 27, 35, 0.2);
+}
+
+.hero-image p {
+    margin-top: 18px;
+    color: var(--grey);
+    letter-spacing: 3px;
+    font-size: 11px;
+}
+
+/* SECTIONS */
+
+.section {
+    padding: 85px 10%;
+    background: var(--black);
+}
+
+.dark-section {
+    background: #100a0b;
+    border-top: 1px solid #341013;
+    border-bottom: 1px solid #341013;
+}
+
+.section h2 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(27px, 4vw, 43px);
+    margin: 15px 0 30px;
+}
+
+.section h3 {
+    font-family: 'Cinzel', serif;
+    color: var(--red);
+    margin: 25px 0 12px;
+}
+
+.section p {
+    color: #c8baba;
+    max-width: 1000px;
+    margin-bottom: 20px;
+}
+
+.section ul {
+    padding-left: 25px;
+    color: #c8baba;
+    margin: 15px 0 25px;
+}
+
+.section li {
+    padding: 5px 0;
+}
+
+.voidar-image {
+    display: block;
+    width: 180px;
+    height: auto;
+    margin: 25px auto;
+}
+
+/* CARDS */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin: 30px 0;
+}
+
+.card {
+    background: #171010;
+    border: 1px solid #511216;
+    padding: 25px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    border-color: var(--red);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(180, 0, 0, 0.12);
+}
+
+.card h3 {
+    color: var(--red);
+    margin: 0 0 15px;
+}
+
+.card p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.card ul {
+    font-size: 14px;
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+/* BELIEFS */
+
+.belief-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.belief-list article {
+    padding: 22px;
+    background: #111;
+    border-left: 3px solid var(--red);
+}
+
+.belief-list h3 {
+    margin-top: 0;
+}
+
+.belief-list p {
+    margin-bottom: 0;
+}
+
+/* PRINCIPLES */
+
+.principle-list {
+    display: grid;
+    gap: 15px;
+    max-width: 900px;
+    margin-top: 30px;
+}
+
+.principle-list article {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    background: #151010;
+    border: 1px solid #421014;
+    padding: 20px;
+}
+
+.principle-list span {
+    font-family: 'Cinzel', serif;
+    color: var(--red);
+    font-size: 25px;
+}
+
+.principle-list p {
+    margin: 0;
+}
+
+/* QUOTES */
+
+blockquote {
+    background: #160e0f;
+    border-left: 3px solid var(--red);
+    padding: 25px;
+    margin: 30px 0;
+    color: #eee;
+    font-family: 'Cinzel', serif;
+    white-space: pre-line;
+}
+
+/* AFFIRMATION */
+
+.affirmation-section {
+    padding: 90px 20px;
+    text-align: center;
+    background: radial-gradient(circle, #31090d, #080808 70%);
+    border-top: 1px solid #541216;
+    border-bottom: 1px solid #541216;
+}
+
+.affirmation-section h2 {
+    color: var(--red);
+    font-family: 'Cinzel', serif;
+    font-size: clamp(25px, 5vw, 48px);
+    margin: 25px 0;
+}
+
+.affirmation-section p {
+    color: #d4c4c4;
+}
+
+/* FOUNDER */
+
+.founder-section {
+    text-align: center;
+}
+
+.founder-section h2 {
+    color: var(--red);
+    font-size: clamp(40px, 6vw, 60px);
+}
+
+.founder-section p {
+    margin: 15px auto;
+}
+
+.founder-motto {
+    font-family: 'Cinzel', serif;
+    color: var(--red) !important;
+    font-size: 20px;
+}
+
+.founder-section a {
+    color: #ff555b;
+    text-decoration: none;
+}
+
+.founder-section a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 50px 20px;
+    background: #040404;
+    border-top: 1px solid #451014;
+}
+
+footer img {
+    width: 85px;
+    height: 85px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid var(--red);
+    margin-bottom: 15px;
+}
+
+footer h2 {
+    color: var(--red);
+    font-family: 'Cinzel', serif;
+    letter-spacing: 5px;
+}
+
+footer p {
+    color: var(--grey);
+    font-size: 13px;
+    margin: 8px 0;
+}
+
+.footer-affirmation {
+    color: var(--red);
+    font-family: 'Cinzel', serif;
+}
+
+.copyright {
+    margin-top: 25px;
+}
+
+/* TABLETS AND MOBILE */
+
+@media (max-width: 1050px) {
+
+    .menu-button {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        width: 100%;
+        background: #080808;
+        border-bottom: 1px solid var(--red);
+        padding: 15px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+    nav a {
+        padding: 12px;
+        border-bottom: 1px solid #251012;
+        font-size: 14px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 65px 7%;
+    }
+
+    .hero-image {
+        margin-top: 20px;
+    }
+
+    .main-sigil {
+        max-width: 350px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section {
+        padding: 65px 7%;
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .cards,
+    .belief-list {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 39px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .section {
+        padding: 55px 6%;
+    }
+
+    .section h2 {
+        font-size: 28px;
+    }
+
+    .principle-list article {
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+}
